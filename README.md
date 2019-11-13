@@ -1,6 +1,6 @@
 For option 2, upload your code and project report (Which algorithm/protocol, how does your code work, your project input, your project output.)
 
-##Notes on AES (block cipher)
+## Notes on AES (block cipher)
     - using 128 bit keys
     - Encription consists of 10 rounds
     - Processing:
@@ -16,5 +16,4 @@ For option 2, upload your code and project report (Which algorithm/protocol, how
 
 
 
-#link to AES  pdf
-    https://engineering.purdue.edu/kak/compsec/NewLectures/Lecture8.pdf
+## [link to AES  pdf] (https://engineering.purdue.edu/kak/compsec/NewLectures/Lecture8.pdf)
