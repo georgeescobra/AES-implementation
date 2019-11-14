@@ -13,7 +13,38 @@ For option 2, upload your code and project report (Which algorithm/protocol, how
     - Each round of processing works on the input state array and produces output state array
         - output state array produced by the lasr round is rearranged into 128-bit output block
     - AES uses a substitution permutation network
+    - last round of encryption does not involve mix columns step
+    - last round of decryption does not involve inverse mix columns step
+    - algorithm is guaranteed to change every bit of the ciphertext
+ 
+#### Substitution Bytes
+    - subBytes
+    - Byte for byte substitution
+    - decryption process := inverseSubBytes
+    - uses a rule that stays the same in all encryption rounds
+    - different in decryption chain
+    - x' = xin^-1 in GF(2^8) // xin => input bit
+    - special constany byte c =0x63
+    - xout = A(x') + c      // xout => output bit
+    
+
+#### Shift Rows
+    - shifting the rows of the state array
+    - decryption process := inverseShiftRows
 
 
-    - [link to AES  pdf](https://engineering.purdue.edu/kak/compsec/NewLectures/Lecture8.pdf)
+### Mix Columns
+    - decryption process := inverseMixColumns
+    - mixes up the bytes in each column separately
+   
+### Add Round Key
+    - adding the round key to the output
+    - decryption process := inverseAddRoundKey
+    
+
+
+
+    - [AES overview pdf](https://engineering.purdue.edu/kak/compsec/NewLectures/Lecture8.pdf)
+    - [AES implementation](https://csrc.nist.gov/csrc/media/publications/fips/197/final/documents/fips-197.pdf)
+
 
